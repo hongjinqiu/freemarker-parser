@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试</title>
+
+<script type="text/javascript" src="errors/NodeError.js"></script>
+<script type="text/javascript" src="errors/ParamError.js"></script>
+<script type="text/javascript" src="utils/Chars.js"></script>
+
+<script type="text/javascript" src="Names.js"></script>
+<script type="text/javascript" src="ParamsParser.js"></script>
+<script type="text/javascript" src="utils/Params.js"></script>
+<script type="text/javascript" src="utils/Node.js"></script>
+<script type="text/javascript" src="Symbols.js"></script>
+<script type="text/javascript" src="utils/Token.js"></script>
+
+<script type="text/javascript" src="Parser.js"></script>
+<script type="text/javascript" src="Tokenizer.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+<script type="text/javascript">
+	//const freemarker = require("freemarker-parser");
+	var template = "";
+	template += " <#assign f=1> ";
+	template += " <#if f gt 0> ";
+	template += "   ${f} &gt; 0 ";
+	template += " <#else> ";
+	template += "   ${f} &lt; 0 ";
+	template += " </#if> "; 
+
+	const parser = new Parser();
+	const astTree = parser.parse(template);
+	
+	console.log(astTree)
+</script>
+</head>
+<body>
+
+</body>
+</html>
